@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taco Recipe</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #c0392b;
+        }
+
+        h2 {
+            color: #e74c3c;
+            border-bottom: 2px solid #e74c3c;
+            padding-bottom: 5px;
+        }
+
+        p {
+            text-align: center;
+            color: #555;
+        }
+
+        img {
+            display: block;
+            margin: 20px auto;
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        ul, ol {
+            padding-left: 20px;
+        }
+
+        li {
+            margin: 8px 0;
+        }
+
+        .ingredients {
+            background-color: #ffe6e6;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .method {
+            background-color: #fff0f0;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #888;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🌮 Delicious Beef Tacos</h1>
+
+    <p>
+        These delicious beef tacos are quick and easy to make, packed with flavor,
+        and perfect for any meal.
+    </p>
+
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQAj6_BVKYycHaSZqNE5yoTIQRUneslUHKRcfPl_OBkBt802hHefkQvHG4vA0TwqnvOBbKBmJ1Tp5-t5sen7cNTiKnW4Ywn858BHaBotc&s=10" alt="Beef tacos on a plate">
+
+    <div class="ingredients">
+        <h2>Ingredients</h2>
+        <ul>
+            <li>500g ground beef</li>
+            <li>1 packet taco seasoning</li>
+            <li>8 taco shells</li>
+            <li>1 cup shredded lettuce</li>
+            <li>1 cup diced tomatoes</li>
+            <li>1 cup shredded cheese</li>
+            <li>1/2 cup sour cream</li>
+        </ul>
+    </div>
+
+    <div class="method">
+        <h2>Method</h2>
+        <ol>
+            <li>Cook the ground beef in a pan over medium heat until browned.</li>
+            <li>Add taco seasoning and follow packet instructions.</li>
+            <li>Warm the taco shells in the oven.</li>
+            <li>Fill each shell with the cooked beef.</li>
+            <li>Add lettuce, tomatoes, cheese, and sour cream.</li>
+            <li>Serve immediately and enjoy!</li>
+        </ol>
+    </div>
+
+    <div class="footer">
+        ❤️ Made with love
+    </div>
+
+</div>
+
+</body>
+</html>
