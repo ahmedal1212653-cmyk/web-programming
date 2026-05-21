@@ -4,45 +4,114 @@
   <title>Petrol Calculator</title>
 
   <style>
-    /* ===== Page layout styling ===== */
+    :root {
+      --bg: #0f172a;
+      --card: rgba(15, 23, 42, 0.95);
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent-strong: #7dd3fc;
+      --border: rgba(148, 163, 184, 0.24);
+      --shadow: 0 25px 70px rgba(15, 23, 42, 0.35);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-
-    /* ===== Container box ===== */
-    .container {
-      border: 1px solid #000;
+      margin: 0;
+      min-height: 100vh;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: grid;
+      place-items: center;
+      background: radial-gradient(circle at top, rgba(56, 189, 248, 0.18), transparent 28%),
+                  linear-gradient(180deg, #0b1120 0%, #0f172a 100%);
+      color: var(--text);
       padding: 20px;
-      width: 250px;
-      text-align: center;
     }
 
-    /* ===== Input fields ===== */
+    .container {
+      width: min(360px, 100%);
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 32px 28px;
+      text-align: center;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(12px);
+    }
+
+    h3 {
+      margin: 0 0 14px;
+      font-size: 1.8rem;
+      letter-spacing: 0.02em;
+    }
+
+    p {
+      color: var(--muted);
+      margin: 0;
+    }
+
     input {
       width: 100%;
-      margin: 10px 0;
-      padding: 5px;
+      margin: 14px 0;
+      padding: 14px 16px;
+      border-radius: 14px;
+      border: 1px solid rgba(148, 163, 184, 0.18);
+      background: rgba(226, 232, 240, 0.08);
+      color: var(--text);
+      font-size: 1rem;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
     }
 
-    /* Focus effect when selecting input */
+    input::placeholder {
+      color: rgba(226, 232, 240, 0.6);
+    }
+
     input:focus {
-      outline: 2px solid blue;
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.14);
     }
 
-    /* ===== Button styling ===== */
     button {
       width: 100%;
-      padding: 8px;
+      padding: 14px 16px;
+      border: none;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+      color: white;
+      font-size: 1rem;
+      font-weight: 700;
       cursor: pointer;
+      box-shadow: 0 16px 30px rgba(56, 189, 248, 0.24);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
-    /* Hover effect for button */
     button:hover {
-      background-color: lightgray;
+      transform: translateY(-1px);
+      box-shadow: 0 20px 36px rgba(56, 189, 248, 0.28);
+    }
+
+    #result {
+      margin-top: 18px;
+      padding: 14px 16px;
+      border-radius: 16px;
+      background: rgba(148, 163, 184, 0.08);
+      color: var(--accent-strong);
+      font-weight: 700;
+    }
+
+    @media (max-width: 420px) {
+      .container {
+        padding: 24px 18px;
+      }
+
+      input,
+      button {
+        padding: 12px 14px;
+      }
     }
   </style>
 </head>
