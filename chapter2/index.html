@@ -4,43 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Breaking Bad Fan Page</title>
-    <link rel="stylesheet" href="style.css?v=1">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <script>
-        window.addEventListener('DOMContentLoaded', function(){
-            try{
-                console.log('document.readyState:', document.readyState);
-                const link = document.querySelector('link[rel="stylesheet"]');
-                console.log('Stylesheet element href attribute:', link ? link.getAttribute('href') : null);
-                console.log('Resolved stylesheet href:', link ? link.href : null);
-                const bg = getComputedStyle(document.body).backgroundColor;
-                console.log('Computed body background:', bg);
-                const sheets = Array.from(document.styleSheets).map(s=>s.href);
-                console.log('Loaded stylesheet hrefs:', sheets);
-                if(link){
-                    fetch(link.getAttribute('href')).then(r=>{
-                        console.log('Fetch stylesheet status:', r.status, 'ok?', r.ok);
-                        return r.text().then(t=>{
-                            console.log('Stylesheet first 120 chars:', t.slice(0,120));
-                        });
-                    }).catch(e=>{
-                        console.error('Fetch error for stylesheet:', e);
-                    });
-                }
-            }catch(err){
-                console.error('Diagnostic script error:', err);
-            }
-        });
-
-        window.addEventListener('error', function(e){
-            console.error('Window error caught:', e.message, 'at', e.filename+':'+e.lineno);
-        });
-        window.addEventListener('unhandledrejection', function(e){
-            console.error('Unhandled promise rejection:', e.reason);
-        });
-    </script>
+    
 
     <nav class="navbar">
         <a href="#plot">Plot</a>
